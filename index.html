@@ -1,65 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>কাউন্টার</title>
+    <title>আমার পোর্টফোলিও</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
+            font-family: 'Arial', sans-serif;
+            background: #0f172a;
+            color: white;
+            line-height: 1.6;
+        }
+        header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            padding: 60px 20px;
             text-align: center;
-            font-family: Arial, sans-serif;
-            padding: 50px;
-            min-height: 100vh;
         }
-        h1 {
-            font-size: 60px;
-            margin: 30px 0;
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
         }
-        button {
-            background: white;
-            color: #667eea;
-            border: none;
-            padding: 15px 25px;
+        header p {
             font-size: 20px;
-            margin: 10px;
+            opacity: 0.9;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        .project {
+            background: #1e293b;
+            padding: 20px;
+            margin: 20px 0;
             border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
+            border-left: 4px solid #667eea;
         }
-        button:hover {
-            transform: scale(1.1);
-        }
-        #reset {
-            background: #ff6b6b;
+        .btn {
+            display: inline-block;
+            background: #667eea;
             color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #1e293b;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
-    <h2>কাউন্টার</h2>
-    <h1 id="count">0</h1>
-    <button id="decrease">-</button>
-    <button id="increase">+</button>
-    <button id="reset">Reset</button>
+    <header>
+        <h1 id="myName">Tazim Hossen</h1>
+        <p>Web Developer & Learner</p>
+    </header>
 
-    <script>
-        let count = 0;
-        const countDisplay = document.getElementById('count');
-        
-        document.getElementById('increase').addEventListener('click', function() {
-            count++;
-            countDisplay.textContent = count;
-        });
+    <section>
+        <h2>আমার সম্পর্কে</h2>
+        <p>আমি মোবাইল দিয়ে ওয়েব ডেভেলপমেন্ট শিখছি। এটা আমার প্রথম পোর্টফোলিও সাইট।</p>
+    </section>
 
-        document.getElementById('decrease').addEventListener('click', function() {
-            count--;
-            countDisplay.textContent = count;
-        });
+    <section>
+        <h2>আমার প্রোজেক্ট</h2>
+        <div class="project">
+            <h3>কাউন্টার অ্যাপ</h3>
+            <p>JavaScript দিয়ে বানানো সিম্পল কাউন্টার।</p>
+            <a href="#" class="btn">দেখো</a>
+        </div>
+    </section>
 
-        document.getElementById('reset').addEventListener('click', function() {
-            count = 0;
-            countDisplay.textContent = count;
-        });
-    </script>
+    <section>
+        <h2>যোগাযোগ</h2>
+        <p>ইমেইল: তোমার@email.com</p>
+        <p>GitHub: github.com/তোমারusername</p>
+    </section>
+
+    <footer>
+        <p>© 2026 তোমার নাম। সব অধিকার সংরক্ষিত।</p>
+    </footer>
 </body>
 </html>
